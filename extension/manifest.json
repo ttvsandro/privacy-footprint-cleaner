@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy Footprint Cleaner",
+  "version": "0.1.0",
+  "description": "Portfolio project: clean trackers/cookies locally and manage your own data-broker opt-out requests. Educational use only — see DISCLAIMER.",
+  "permissions": [
+    "cookies",
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Privacy Footprint Cleaner"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "tracker_rules",
+        "enabled": true,
+        "path": "rules/tracker_rules.json"
+      }
+    ]
+  }
+}

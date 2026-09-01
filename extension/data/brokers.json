@@ -1,0 +1,122 @@
+[
+  {
+    "id": "spokeo",
+    "name": "Spokeo",
+    "domain": "spokeo.com",
+    "category": "People search",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.spokeo.com/optout",
+    "notes": "Search your listing first, then follow the on-page removal flow.",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "whitepages",
+    "name": "Whitepages",
+    "domain": "whitepages.com",
+    "category": "People search",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.whitepages.com/suppression-requests",
+    "notes": "May require confirming the listing by phone verification.",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "beenverified",
+    "name": "BeenVerified",
+    "domain": "beenverified.com",
+    "category": "Background check / people search",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.beenverified.com/app/optout/search",
+    "notes": "Requires locating your exact record before submitting removal.",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "mylife",
+    "name": "MyLife",
+    "domain": "mylife.com",
+    "category": "People search / reputation",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.mylife.com/privacy-policy",
+    "notes": "Removal flow is on the privacy policy page; historically inconsistent, be persistent.",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "intelius",
+    "name": "Intelius",
+    "domain": "intelius.com",
+    "category": "Background check / people search",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.intelius.com/opt-out",
+    "notes": "Shares data with several sister sites owned by the same parent company.",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "peoplefinders",
+    "name": "PeopleFinders",
+    "domain": "peoplefinders.com",
+    "category": "People search",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.peoplefinders.com/manage",
+    "notes": "",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "radaris",
+    "name": "Radaris",
+    "domain": "radaris.com",
+    "category": "People search",
+    "optOutMethod": "form",
+    "optOutUrl": "https://radaris.com/control/privacy",
+    "notes": "Removal requests have historically needed to be repeated periodically.",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "truepeoplesearch",
+    "name": "TruePeopleSearch",
+    "domain": "truepeoplesearch.com",
+    "category": "People search",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.truepeoplesearch.com/removal",
+    "notes": "Free removal, usually fast to process.",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "fastpeoplesearch",
+    "name": "FastPeopleSearch",
+    "domain": "fastpeoplesearch.com",
+    "category": "People search",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.fastpeoplesearch.com/removal",
+    "notes": "",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "usSearch",
+    "name": "USSearch",
+    "domain": "ussearch.com",
+    "category": "People search",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.ussearch.com/opt-out/submit",
+    "notes": "",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "instantcheckmate",
+    "name": "Instant Checkmate",
+    "domain": "instantcheckmate.com",
+    "category": "Background check",
+    "optOutMethod": "form",
+    "optOutUrl": "https://www.instantcheckmate.com/opt-out/",
+    "notes": "",
+    "verifyBeforeUse": true
+  },
+  {
+    "id": "peekyou",
+    "name": "PeekYou",
+    "domain": "peekyou.com",
+    "category": "People search / social aggregator",
+    "optOutMethod": "email",
+    "optOutEmail": "",
+    "notes": "No confirmed public opt-out email at time of writing — check their current privacy/contact page and fill in the address yourself before sending.",
+    "verifyBeforeUse": true
+  }
+]

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Privacy Footprint Cleaner</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Privacy Footprint Cleaner</h1>
+    <p class="subtitle">Proyecto de portfolio · todo se ejecuta localmente en tu navegador</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="trackers">Trackers &amp; Cookies</button>
+    <button class="tab-btn" data-tab="brokers">Data Brokers</button>
+    <button class="tab-btn" data-tab="breach">Breach Check</button>
+    <button class="tab-btn" data-tab="about">Aviso legal</button>
+  </nav>
+
+  <main>
+    <section id="tab-trackers" class="tab-panel active">
+      <div class="card">
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-value" id="site-cookie-count">–</span>
+            <span class="stat-label">cookies en este sitio</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" id="total-blocked-count">–</span>
+            <span class="stat-label">trackers bloqueados (total)</span>
+          </div>
+        </div>
+        <label class="toggle-row">
+          <input type="checkbox" id="tracking-toggle" checked />
+          Bloquear trackers conocidos
+        </label>
+        <div class="button-row">
+          <button id="clear-site-cookies">Borrar cookies de este sitio</button>
+          <button id="clear-all-cookies" class="danger">Borrar todas las cookies</button>
+        </div>
+        <p id="cookie-status" class="status-msg"></p>
+      </div>
+    </section>
+
+    <section id="tab-brokers" class="tab-panel">
+      <div class="card">
+        <h2>Tu perfil (solo local)</h2>
+        <div class="profile-form">
+          <input id="profile-name" placeholder="Nombre completo" />
+          <input id="profile-city" placeholder="Ciudad" />
+          <input id="profile-region" placeholder="Provincia/Estado" />
+          <input id="profile-country" placeholder="País" />
+          <button id="save-profile">Guardar</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Progreso de bajas</h2>
+        <div class="progress-bar"><div id="broker-progress-fill" class="progress-fill"></div></div>
+        <p id="broker-progress-text" class="status-msg"></p>
+      </div>
+      <div id="broker-list" class="broker-list"></div>
+    </section>
+
+    <section id="tab-breach" class="tab-panel">
+      <div class="card">
+        <h2>Comprobar brechas de datos</h2>
+        <p class="hint">
+          Usa tu propia clave de la API de
+          <a href="https://haveibeenpwned.com/API/Key" target="_blank" rel="noopener">Have I Been Pwned</a>.
+          La clave y el email solo se envían a haveibeenpwned.com, directamente desde tu navegador.
+        </p>
+        <input id="hibp-key" placeholder="Tu API key de HIBP" type="password" />
+        <input id="hibp-email" placeholder="Email a comprobar" type="email" />
+        <button id="hibp-check">Comprobar</button>
+        <div id="hibp-result" class="hibp-result"></div>
+      </div>
+    </section>
+
+    <section id="tab-about" class="tab-panel">
+      <div class="card">
+        <h2>Aviso legal</h2>
+        <p>
+          Este es un proyecto educativo / de portfolio. No automatiza envíos ni bots contra sitios de
+          terceros: cada solicitud de baja la revisa y envía la propia persona usuaria. No hay
+          servidor propio — tus datos nunca salen de este navegador salvo cuando tú decides enviarlos
+          (por ejemplo, al abrir un email o la página oficial de un data broker).
+        </p>
+        <p>
+          No hay ninguna garantía de que las bajas se completen ni de la vigencia de los enlaces
+          listados: verifícalos en la web oficial de cada servicio antes de usarlos. Consulta
+          <code>DISCLAIMER.md</code> y <code>LICENSE</code> en el repositorio para más detalle.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
