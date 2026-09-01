@@ -27,7 +27,11 @@ export function buildOptOutEmail(broker, profile, recipientEmail) {
     profile.name || "[your name]",
   ].join("\n");
 
-  const params = new URLSearchParams({ subject, body });
-  const to = encodeURIComponent(recipientEmail || "");
-  return `mailto:${to}?${params.toString()}`;
+  // Note: deliberately NOT using URLSearchParams here — it encodes spaces as
+  // "+", which the mailto: scheme takes literally instead of decoding as a
+  // space. encodeURIComponent gives correct %20 percent-encoding instead.
+  // The recipient address itself is left unencoded, as most mail clients
+  // expect a plain address before the "?".
+  const query = `subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  return `mailto:${recipientEmail || ""}?${query}`;
 }
